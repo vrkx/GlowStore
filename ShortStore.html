@@ -32,29 +32,8 @@
     
     <div>
 
-     <p class="version" id="version"><i class="fa-solid fa-info"></i> </p>
-     <script type="text/javascript">
-
-      fetch('./version.json')
-      .then (function(response){
-
-        return response.json();
-
-      })
-
-      .then(function(version){
-        for(var i=0; i<version.length; i++){
-          document.getElementById("version").innerHTML += version[i].version +"<br />";
-        }
-
-      })
-
-      .catch(function(err){
-
-        console.log(err)
-      })
-
-     </script>
+     <p class="version" id="Iver"><i class="fa-solid fa-info"></i> </p>
+   
 
     </div>
     
