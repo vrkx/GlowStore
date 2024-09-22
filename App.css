@@ -83,6 +83,8 @@ nav ul li a{
   
         
 background: -webkit-linear-gradient(#ffa34c, #ffa3ff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 animation: buttonAnim 10s ease infinite;
 border-radius: 10px;
 color: white;
@@ -116,7 +118,7 @@ label.logo{
     padding-left: 10px;
     border-radius: 4px;
     color: #f0f0f0;
-    font-size: 38px;
+    font-size: 37px;
     line-height: 80px;
    
 }
@@ -165,11 +167,9 @@ hr{
     height: 40px;
     margin-top: 10px;
     border-radius: 111px;
-    text-align: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    margin-right: 15px;
+    align-content: flex-end;
+    justify-content: space-evenly;
 }
 
 a.Download {
@@ -218,7 +218,7 @@ a.Download {
 
 .Shortcut1 {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 5px;
     height: 60px;
     width: 400px;
@@ -226,10 +226,10 @@ a.Download {
     color: white;
     border-radius: 10px;
     flex-direction: row;
-    justify-content: space-around;
-
+    align-items: flex-start;
+    align-content: center;
+    justify-content: space-between;
 }
-
 label.ShortName1{
     text-align: left;
     font-size: 20px;
@@ -275,5 +275,12 @@ white-space: nowrap;
     
     width: 300px;
     border-radius: 10px;
+
+}
+
+.ReButton{
+
+background: #101010;
+border-radius: 20px;
 
 }
