@@ -1,0 +1,279 @@
+
+@font-face{
+
+    font-family: iOS;
+    src: url(fonts/SFPRODISPLAYREGULAR.OTF);
+    }
+    
+
+    @font-face{
+
+        font-family: biOS;
+        src: url(fonts/SFPRODISPLAYBOLD.OTF);
+        }
+        
+body {
+    font-family: biOS;
+    background-color: #000000;
+}
+
+nav{
+
+  
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+
+}
+
+
+nav ul{
+    background-size: 10% 10%;
+list-style-type: none;
+float: right;
+margin-right: 10px;
+}
+
+nav ul li{
+   
+    line-height: 55px;
+    
+
+  
+}
+
+
+
+.Container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+p{
+
+    color: gray;
+
+}
+
+p.version{
+    padding-left: 10px;
+    color: gray;
+
+}
+
+.card{
+
+    width: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img{
+
+    width: 100%;
+    height: auto;
+     object-fit: cover;
+    
+}
+
+nav ul li a{
+
+  
+        
+background: -webkit-linear-gradient(#ffa34c, #ffa3ff);
+animation: buttonAnim 10s ease infinite;
+border-radius: 10px;
+color: white;
+font-size: 30px;
+text-decoration: none;
+text-decoration-color: #000000;
+}
+
+
+@keyframes buttonAnim{
+
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+    
+    }
+    
+
+
+
+
+label.logo{
+    
+     background: -webkit-linear-gradient(#ffa34c, #e57eff);
+     -webkit-background-clip: text;
+     background-size: 1000% 1000%;
+     animation: LogoAnim 10s ease infinite;
+    -webkit-text-fill-color: transparent;
+    font-family: biOS;
+    text-align: center;
+    padding-left: 10px;
+    border-radius: 4px;
+    color: #f0f0f0;
+    font-size: 45px;
+    line-height: 80px;
+   
+}
+
+
+@keyframes LogoAnim{
+
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+    
+    }
+    
+
+label.Sourc{
+
+
+color: gray;
+font-family: iOS;
+font-size: 14px;
+padding-left: 10;
+
+}
+
+label.ShorDiv{
+
+    background: -webkit-linear-gradient(#ffa34c, #f36eff);
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   color: white;
+font-family: biOS;
+font-size: 30px;
+padding-left: 10px;
+
+}
+
+hr{
+    height: 0.5px;
+    border: none;
+    background-color: #2b2b2d;
+}
+
+.cont {
+    display: flex;
+    background: #101010;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 111px;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+a.Download {
+    display: flex;
+    background: -webkit-linear-gradient(#ffa26c, #ff66ff);
+      -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-size: 1000% 1000%;
+    animation: DownAnim 10s ease infinite;
+    border-radius: 100px;
+    color: white;
+    width: 69px;
+    align-self: center;
+    height: 30px;
+    font-size: 25px;
+    text-decoration: none;
+    text-decoration-color: #000000;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes DownAnim{
+
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+    
+    }
+    
+
+
+.Shortcut1 img {
+    display: flex;
+    width: 14%;
+    border-radius: 15px;
+    height: 90%;
+    /* padding-top: 1px; */
+    align-self: center;
+    object-fit: cover;
+    gap: 5px;
+}
+
+.Shortcut1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    height: 60px;
+    width: 400px;
+    background: #000000;
+    color: white;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+label.ShortName1{
+    text-align: left;
+    font-size: 20px;
+    color: #f0f0f0;
+    font-family: biOS;
+
+}
+
+.Content1 {
+    
+        height: auto;
+        color: white;
+        padding-left: 5px;
+        height: 15px;
+        flex-wrap: wrap;
+        align-items: center;
+  
+}
+
+
+.HorizontalSlider {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+    margin-block-end: 20px;
+}
+.SlideContainer{
+
+display: block;
+white-space: nowrap;
+
+}
+
+.Item{
+   
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+.Item img{
+
+    
+    width: 300px;
+    border-radius: 10px;
+
+}
