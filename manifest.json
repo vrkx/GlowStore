@@ -1,6 +1,6 @@
 {
-  "short_name": "IShort",
-  "name": "IShort",
+  "short_name": "Shortstore",
+  "name": "Shortstore",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display_override": ["fullscreen", "minimal-ui"],
