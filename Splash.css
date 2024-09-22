@@ -1,0 +1,41 @@
+@font-face{
+
+    font-family: iOS;
+    src: url(fonts/SFPRODISPLAYREGULAR.OTF);
+    }
+    
+    
+    @font-face{
+    
+        font-family: biOS;
+        src: url(fonts/SFPRODISPLAYBOLD.OTF);
+        }
+    
+    body{
+    
+    background : linear-gradient (45deg,#ffbc7e70,#f04dff70);
+    background-size: 1000% 1000%;
+    animation: gradientAnim 10s ease infinite;
+    
+    }
+    
+    @keyframes gradientAnim{
+    
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+    
+    }
+    
+
+.SplashScreen{
+
+   background: #000000;
+
+}
+
+label{
+
+font-family: iOS;
+
+}
