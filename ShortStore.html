@@ -32,19 +32,19 @@
     
     <div>
 
-     <p class="version" id="Iver"><i class="fa-solid fa-info"></i> </p>
+     <p class="version" id="version"><i class="fa-solid fa-info"></i> </p>
      <script type="text/javascript">
 
-      fetch('/version.json')
+      fetch('./version.json')
       .then (function(response){
 
         return response.json();
 
       })
 
-      .then(function(Iver){
+      .then(function(version){
         for(var i=0; i<version.length; i++){
-          document.getElementById("Iver").innerHTML += version[i].version +"<br/>"
+          document.getElementById("version").innerHTML += version[i].version +"<br/>";
         }
 
       })
