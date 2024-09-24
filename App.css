@@ -241,7 +241,7 @@ a.Download {
     flex-direction: row;
     align-items: flex-start;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;;
 }
 
 .IpaDiv {
@@ -256,7 +256,7 @@ a.Download {
     flex-direction: row;
     align-items: flex-start;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;;
 }
 
 .IpaDiv img {
