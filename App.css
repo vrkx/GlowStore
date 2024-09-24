@@ -321,24 +321,44 @@ white-space: nowrap;
 
 color: #ffffff;
 font-family: biOS;
+text-decoration: none;
 
 }
 
-.GIT{
-
-
-background: #151515;
-
+.GIT {
+    margin-top: 10px;
+    height: 60px;
+    display: flex;
+    border-radius: 10px;
+    background: #101010;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
 }
 
-.Github{
-
-background: #4077c067;
-
+.Hub{
+    color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    background: #4077c067;
+    height: 40px;
+    width: 120px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .Website{
 
-    background: #55c04067;
+    color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    background: #15ff0067;
+    height: 40px;
+    width: 120px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     
 }
