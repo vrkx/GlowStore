@@ -118,7 +118,7 @@ label.logo{
     padding-left: 10px;
     border-radius: 4px;
     color: #f0f0f0;
-    font-size: 37px;
+    font-size: 35px;
     line-height: 80px;
    
 }
@@ -145,6 +145,19 @@ padding-left: 10;
 
 label.ShorDiv{
 
+    background: -webkit-linear-gradient(#ffa34c, #f36eff);
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   color: white;
+font-family: biOS;
+font-size: 30px;
+padding-left: 10px;
+
+}
+
+label.Side{
+
+    margin-top: 10px;
     background: -webkit-linear-gradient(#ffa34c, #f36eff);
     -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
