@@ -155,7 +155,7 @@ padding-left: 10px;
 
 }
 
-label.Side{
+label.SideL {
 
     margin-top: 10px;
     background: -webkit-linear-gradient(#ffa34c, #f36eff);
@@ -176,7 +176,7 @@ hr{
 
 .cont {
     display: flex;
-    background: #151515;
+    background: #101010;
     height: 40px;
     margin-top: 10px;
     border-radius: 111px;
@@ -322,7 +322,7 @@ white-space: nowrap;
 .ReButton {
     height: 45px;
     width: 160px;
-    background: #151515;
+    background: #101010;
     border-radius: 15px;
     display: flex;
     justify-content: center;
