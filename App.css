@@ -231,7 +231,7 @@ a.Download {
     justify-content: space-between;
 }
 
-.Ipa {
+.IpaDiv {
     display: flex;
     flex-wrap: nowrap;
     gap: 5px;
@@ -246,7 +246,7 @@ a.Download {
     justify-content: space-between;
 }
 
-.Ipa img {
+.IpaDiv img {
     display: flex;
     width: 14%;
     height: 90%;
@@ -343,7 +343,7 @@ text-decoration: none;
     display: flex;
     background: #4077c067;
     height: 40px;
-    width: 120px;
+    width: 180px;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -356,7 +356,7 @@ text-decoration: none;
     display: flex;
     background: #15ff0067;
     height: 40px;
-    width: 120px;
+    width: 180px;
     justify-content: center;
     align-content: center;
     align-items: center;
