@@ -163,7 +163,7 @@ hr{
 
 .cont {
     display: flex;
-    background: #202020;
+    background: #151515;
     height: 40px;
     margin-top: 10px;
     border-radius: 111px;
@@ -231,7 +231,7 @@ a.Download {
     justify-content: space-between;
 }
 
-.IpaDiv {
+.Ipa {
     display: flex;
     flex-wrap: nowrap;
     gap: 5px;
@@ -246,7 +246,7 @@ a.Download {
     justify-content: space-between;
 }
 
-.IpaDiv img {
+.Ipa img {
     display: flex;
     width: 14%;
     height: 90%;
@@ -308,7 +308,7 @@ white-space: nowrap;
 .ReButton {
     height: 45px;
     width: 160px;
-    background: #202020;
+    background: #151515;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -319,9 +319,7 @@ white-space: nowrap;
 
 .Redir{
 
-    background: -webkit-linear-gradient(#ffa26c, #ff66ff);
-      -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+color: #ffffff;
 font-family: biOS;
 
 }
@@ -329,6 +327,18 @@ font-family: biOS;
 .GIT{
 
 
-background: #202020;
+background: #151515;
 
+}
+
+.Github{
+
+background: #4077c067;
+
+}
+
+.Website{
+
+    background: #55c04067;
+    
 }
