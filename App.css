@@ -163,7 +163,7 @@ hr{
 
 .cont {
     display: flex;
-    background: #101010;
+    background: #202020;
     height: 40px;
     margin-top: 10px;
     border-radius: 111px;
@@ -230,6 +230,32 @@ a.Download {
     align-content: center;
     justify-content: space-between;
 }
+
+.Ipa {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    height: 60px;
+    width: 400px;
+    background: #000000;
+    color: white;
+    border-radius: 10px;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.Ipa img {
+    display: flex;
+    width: 14%;
+    height: 90%;
+    /* padding-top: 1px; */
+    align-self: center;
+    object-fit: cover;
+    gap: 5px;
+}
+
 label.ShortName1{
     text-align: left;
     font-size: 20px;
@@ -281,12 +307,28 @@ white-space: nowrap;
 
 .ReButton {
     height: 45px;
-    width: 170px;
-    background: #101010;
+    width: 160px;
+    background: #202020;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     margin-top: 5px;
     align-items: center;
     align-content: center;
+}
+
+.Redir{
+
+    background: -webkit-linear-gradient(#ffa26c, #ff66ff);
+      -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+font-family: biOS;
+
+}
+
+.GIT{
+
+
+background: #202020;
+
 }
