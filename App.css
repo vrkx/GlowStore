@@ -249,6 +249,7 @@ a.Download {
 .IpaDiv img {
     display: flex;
     width: 14%;
+    border-radius: 15px;
     height: 90%;
     /* padding-top: 1px; */
     align-self: center;
@@ -322,6 +323,7 @@ white-space: nowrap;
 color: #ffffff;
 font-family: biOS;
 text-decoration: none;
+
 
 }
 
