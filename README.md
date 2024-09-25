@@ -5,7 +5,7 @@
 Carrot is a free alternative store with a lot of shortcuts,sideloading apps and more for your iOS device.
 
 ## Download 
-To download Shortstore you just have to go to https://vrkx.github.io/Shortstore from your iOS device and follow the steps indicated there.
+To download Carrot you must have to go to the website : https://vrkx.github.io/Carrot from your iOS device and follow the steps indicated there.
 
 ## Rat or Virus?
 Carrot is completely safe and secure, our application is made all in html, css and javascript, we also are open source for people to feel more secure and safe.
