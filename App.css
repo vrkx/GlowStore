@@ -81,8 +81,7 @@ p.version{
 nav ul li a{
 
   
-        
-background: -webkit-linear-gradient(#ffa34c, #ffa3ff);
+    background: -webkit-linear-gradient(#ffa34c, #179c17);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 animation: buttonAnim 10s ease infinite;
@@ -108,7 +107,7 @@ text-decoration-color: #000000;
 
 label.logo{
     
-     background: -webkit-linear-gradient(#ffa34c, #e57eff);
+     background: -webkit-linear-gradient(#ffa34c, #179c17);
      -webkit-background-clip: text;
      background-size: 1000% 1000%;
      animation: LogoAnim 10s ease infinite;
@@ -145,7 +144,7 @@ padding-left: 10;
 
 label.ShorDiv{
 
-    background: -webkit-linear-gradient(#ffa34c, #f36eff);
+    background: -webkit-linear-gradient(#ffa34c, #179c17);
     -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    color: white;
@@ -158,7 +157,7 @@ padding-left: 10px;
 label.SideL {
 
     margin-top: 10px;
-    background: -webkit-linear-gradient(#ffa34c, #f36eff);
+    background: -webkit-linear-gradient(#ffa34c, #179c17);
     -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    color: white;
@@ -187,7 +186,7 @@ hr{
 
 a.Download {
     display: flex;
-    background: -webkit-linear-gradient(#ffa26c, #ff66ff);
+    background: -webkit-linear-gradient(#ffa34c, #179c17);
       -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
      background-size: 1000% 1000%;

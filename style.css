@@ -12,8 +12,7 @@ src: url(fonts/SFPRODISPLAYREGULAR.OTF);
     }
 
 body{
-
-background : linear-gradient(45deg,#ffbd7e,rgb(226, 154, 255));
+    background: -webkit-linear-gradient(#ffa34c, #179c17);
 background-size: 1000% 1000%;
 animation: gradientAnim 10s ease infinite;
 
