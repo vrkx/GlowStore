@@ -17,24 +17,10 @@ body {
     background-color: #000000;
 }
 
-nav.sticky{
 
-    background-color: #252525;
-    
-
-
-}
-
-nav.sticky{
-
-    filter: blur(1px);  
-   
-
-}
 
 nav{
-    top: 0px;
-    position: sticky;
+    
     justify-content: space-between;
     height: 80px;
     width: 100%;
