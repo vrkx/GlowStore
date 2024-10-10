@@ -236,6 +236,17 @@ a.Download {
     justify-content: space-around;;
 }
 
+.lol{
+
+    
+        font-size: 18px;
+        font-family: 'biOS';
+        color: white;
+        padding-left: 10px;
+    
+
+}
+
 .IpaDiv {
     display: flex;
     flex-wrap: nowrap;

@@ -33,13 +33,13 @@
     
     
     <div id="app">
-      <div id="version">Current Version: <span id="current-version"></span></div>
+      <div id="version" class="lol">Current Version: <span id="current-version"></span></div>
       <div id="update-message"></div>
   </div>
   <script src="app.js"></script>
   <script>
       if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('service-worker.js')
+          navigator.serviceWorker.register('sw.js')
               .then(registration => console.log('Service Worker registered'))
               .catch(error => console.log('Service Worker registration failed:', error));
       }
