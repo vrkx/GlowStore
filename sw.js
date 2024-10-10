@@ -1,28 +1,21 @@
-// On install - caching the application shell
+const CACHE_NAME = 'version-checker-v1';
+const urlsToCache = [
+    '/',
+    '/index.html',
+    '/app.js',
+    '/manifest.json'
+];
 
-self.addEventListener('fetch', function(event) {});
-
-self.addEventListener('install', function(event) {
+self.addEventListener('install', event => {
     event.waitUntil(
-      caches.open('sw-cache').then(function(cache) {
-        // cache any static files that make up the application shell
-        return cache.add('ShortStore.html');
-      })
+        caches.open(CACHE_NAME)
+            .then(cache => cache.addAll(urlsToCache))
     );
-  });
-  
-  // On network request
-  self.addEventListener('fetch', function(event) {
+});
+
+self.addEventListener('fetch', event => {
     event.respondWith(
-      // Try the cache
-      caches.match(event.request).then(function(response) {
-        //If response found return it, else fetch again
-        return response || fetch(event.request);
-      })
+        caches.match(event.request)
+            .then(response => response || fetch(event.request))
     );
-  });
-
-
-
-
-
+});

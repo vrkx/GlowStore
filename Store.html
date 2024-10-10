@@ -8,9 +8,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <meta name="HandheldFriendly" content="true" />
       <link rel="stylesheet" href="App.css">
-      <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="manifest" href="manifest.json">
+      <link rel="apple-touch-startup-image" href="images/192.png">
       <script>
           //if browser support service worker
           if('serviceWorker' in navigator) {
@@ -31,7 +32,18 @@
     </nav>
     
     
-
+    <div id="app">
+      <div id="version">Current Version: <span id="current-version"></span></div>
+      <div id="update-message"></div>
+  </div>
+  <script src="app.js"></script>
+  <script>
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js')
+              .then(registration => console.log('Service Worker registered'))
+              .catch(error => console.log('Service Worker registration failed:', error));
+      }
+  </script>
      <p class="version" id="vers"><i class="fa-solid fa-info"> Version : 1.5.2</i> </p>
    
 
@@ -105,6 +117,21 @@
       <a class="Redir" href=" "><i class="fa-solid fa-globe"></i> Website</a>
     </div>
     </div>
+
+    <div class="IpaDiv">
+      <img src="images/Scarlet.png" alt=""> <div class="Content1"><label class="ShortName1">Scarlet ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </label> <p>v1.0.2</p></div>
+        <div class="cont"> <a href="ipas/ScarletAlpha.ipa"  class="Download"><i class="fa-solid fa-cloud-arrow-down"></i></a></div>
+      </div>
+    
+      <div class="GIT">
+        <div class="Hub">
+         <a class="Redir" href="https://github.com/DebianArch64/Scarlet"><i class="fa-brands fa-github"></i> Github</a>
+       </div>
+  
+       <div class="Website">
+        <a class="Redir" href="https://usescarlet.com"><i class="fa-solid fa-globe"></i> Website</a>
+      </div>
+      </div>
      
     <div class="IpaDiv">
       <img src="images/SideStore.png" alt=""> <div class="Content1">SideStore ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
