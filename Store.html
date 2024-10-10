@@ -20,17 +20,28 @@
         </script>
   </head>
 <body>
-    <nav>
+    <nav id="blurpart">
 
       <label class="logo"><i class="fa-solid fa-carrot"></i> Carrot</label>
       <ul>
 
         <div class="ReButton">
-        <li><a class="active" href="https://vrkx.github.io/Shortstore"><i class="fa-solid fa-rotate-right"></i>Updates </a></li>
+       
       </div> 
       </ul>
     </nav>
     
+    <script type="text/javascript">
+
+      window.addEventListener("scroll", function() {
+
+        var header = document.getElementById("blurpart");
+        header.classList.toggle("sticky", window.scrollY > 0);
+
+      })
+
+    </script>
+
     
     <div id="app">
       <div id="version" class="VerDiv">Current Version: <span id="current-version"></span></div>
