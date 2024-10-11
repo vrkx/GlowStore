@@ -4,7 +4,7 @@
   "theme_color": "#101010",
   "background_color": "#101010",
   "display_override": ["fullscreen", "minimal-ui"],
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
     "src": "images/86.png",
