@@ -20,14 +20,11 @@ body {
 
 
 nav {
-    background-color: #080808;
+    
     justify-content: space-between;
     height: 90px;
     width: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    border-radius: 8px;
+ 
 }
 
 
