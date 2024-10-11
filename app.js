@@ -1,4 +1,4 @@
-const currentVersion = '1.5.4';
+const currentVersion = '1.5.6';
 const versionElement = document.getElementById('current-version');
 const updateMessage = document.getElementById('update-message');
 
@@ -16,4 +16,4 @@ function checkVersion() {
 }
 
 checkVersion();
-setInterval(checkVersion, 5 * 60 * 1000);
+setInterval(checkVersion, 1 * 60 * 1000);

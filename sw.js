@@ -2,8 +2,10 @@ const CACHE_NAME = 'version-checker-v1';
 const urlsToCache = [
     '/',
     '/index.html',
+    '/app.css',
     '/app.js',
-    '/manifest.json'
+    '/manifest.json',
+    '/version.json'
 ];
 
 self.addEventListener('install', event => {
