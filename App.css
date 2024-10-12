@@ -156,6 +156,15 @@ label.ShorDiv {
     padding-left: 10px;
 }
 
+label.infooo {
+  
+    color: #dadada;
+    font-family: biOS;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+
 label.SideL {
     margin-top: 10px;
     color: #0061ff;
