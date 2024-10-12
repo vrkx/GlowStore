@@ -193,55 +193,53 @@
       const userAgent = navigator.userAgent;
       let deviceModel = "Unknown Apple Device";
       let softwareVersion = "Unknown";
+      let isApple = false;
 
-      // Check if it's an Apple device
-      if (!/iPhone|iPad|iPod|Macintosh/.test(userAgent)) {
-          document.getElementById('not-apple').style.display = 'block';
-          document.querySelector('.info-container').style.display = 'none';
-          return;
+      // Helper function to extract version from user agent string
+      function extractVersion(regex) {
+          const match = userAgent.match(regex);
+          return match ? match[1] : null;
       }
 
-      // Detect iPhone model
-      if (/iPhone/.test(userAgent)) {
-          const iPhoneVersion = userAgent.match(/iPhone OS (\d+)_/);
-          if (iPhoneVersion) {
-              softwareVersion = `iOS ${iPhoneVersion[1]}`;
-          }
-          const modelNumber = userAgent.match(/iPhone(\d+),\d+/);
-          if (modelNumber) {
-              const model = parseInt(modelNumber[1]);
-              if (model >= 14) deviceModel = "iPhone 12 or newer";
-              else if (model >= 12) deviceModel = "iPhone 11 or XS/XR";
-              else if (model >= 10) deviceModel = "iPhone X or 8";
-              else deviceModel = "iPhone 7 or older";
+      // Check for iOS devices (iPhone, iPad, iPod)
+      if (/iPhone|iPad|iPod/.test(userAgent)) {
+          isApple = true;
+          const iOSVersion = extractVersion(/OS (\d+)_/);
+          softwareVersion = iOSVersion ? `iOS ${iOSVersion}` : "iOS (version unknown)";
+          
+          if (/iPhone/.test(userAgent)) {
+              deviceModel = "iPhone";
+          } else if (/iPad/.test(userAgent)) {
+              deviceModel = "iPad";
+          } else if (/iPod/.test(userAgent)) {
+              deviceModel = "iPod";
           }
       }
-      // Detect iPad model
-      else if (/iPad/.test(userAgent)) {
-          const iPadVersion = userAgent.match(/CPU OS (\d+)_/);
-          if (iPadVersion) {
-              softwareVersion = `iPadOS ${iPadVersion[1]}`;
-          }
-          deviceModel = "iPad";
-      }
-      // Detect Mac model
-      else if (/Macintosh/.test(userAgent)) {
-          const macVersion = userAgent.match(/Mac OS X (\d+)[._](\d+)/);
-          if (macVersion) {
-              const majorVersion = parseInt(macVersion[1]);
-              const minorVersion = parseInt(macVersion[2]);
-              if (majorVersion >= 11) {
-                  softwareVersion = `macOS ${majorVersion}`;
-              } else {
-                  softwareVersion = `macOS 10.${minorVersion}`;
-              }
+      // Check for Mac
+      else if (/Mac/.test(userAgent)) {
+          isApple = true;
+          const macOSVersion = extractVersion(/Mac OS X (\d+[._]\d+)/);
+          if (macOSVersion) {
+              const versionNumber = macOSVersion.replace('_', '.');
+              softwareVersion = parseFloat(versionNumber) >= 10.15 ? `macOS ${versionNumber}` : `OS X ${versionNumber}`;
+          } else {
+              softwareVersion = "macOS (version unknown)";
           }
           deviceModel = "Mac";
       }
 
-      document.getElementById('software-version').textContent = softwareVersion;
-      document.getElementById('device-model').textContent = deviceModel;
+      if (isApple) {
+          document.getElementById('software-version').textContent = softwareVersion;
+          document.getElementById('device-model').textContent = deviceModel;
+      } else {
+          document.getElementById('not-apple').style.display = 'block';
+          document.querySelector('.info-container').style.display = 'none';
+      }
   }
+
+  // Call the function when the page loads
+  window.onload = getAppleDeviceInfo;
+</script>
 
   // Call the function when the page loads
   window.onload = getAppleDeviceInfo;
