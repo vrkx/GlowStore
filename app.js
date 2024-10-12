@@ -1,4 +1,4 @@
-const currentVersion = '1.6.0';
+const currentVersion = '1.6.1';
 const versionElement = document.getElementById('current-version');
 const updateMessage = document.getElementById('update-message');
 

@@ -32,11 +32,6 @@
   </style>
   </head>
 <body>
-  <div class="container">
-    <div class="content">
-        <div id="home" class="page active">
-    
-    <h1>Home</h1>
     <nav id="blurpart">
 
       <label class="logo">🥕Carrot</label>
@@ -49,18 +44,7 @@
     
     
     
-    <div id="app" >
-      <div id="version" class="VerDiv">🔄 Current Version: <span id="current-version">1.5.6</span></div>
-      <div id="update-message"></div>
-  </div>
-  <script src="app.js"></script>
-  <script>
-      if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('sw.js')
-              .then(registration => console.log('Service Worker registered'))
-              .catch(error => console.log('Service Worker registration failed:', error));
-      }
-  </script>
+    
     
 
    
@@ -177,89 +161,90 @@
 
     </div>
 
-        </div>
-        <div id="settings" class="page">
-            <h1>Settings</h1>
-            <p>Device Model: <span id="device-model"></span></p>
-            <div class="theme-toggle">
-                <label class="switch">
-                    <input type="checkbox" id="theme-toggle">
-                    <span class="switch-slider"></span>
-                </label>
-                <span id="theme-label">Light Mode</span>
-            </div>
-        </div>
+    <h1>Device Information</h1>
+    <div class="info-container">
+
+      <div id="app" >
+        <div id="version" class="VerDiv">🔄 Current Version: <span id="current-version">1.6.0</span></div>
+        <div id="update-message"></div>
     </div>
-    <div class="nav-slider">
-        <div class="slider">
-            <div class="slider-text">
-                <span>Home</span>
-                <span>Settings</span>
-            </div>
-            <div class="slider-button"></div>
-        </div>
-    </div>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(registration => console.log('Service Worker registered'))
+                .catch(error => console.log('Service Worker registration failed:', error));
+        }
+    </script>
+<div class="info-container">
+  <div class="info-item">
+      <span class="info-label">Software Version:</span>
+      <span id="software-version">Detecting...</span>
+  </div>
+  <div class="info-item">
+      <span class="info-label">Device Model:</span>
+      <span id="device-model">Detecting...</span>
+  </div>
 </div>
+<p id="not-apple">This does not appear to be an Apple device.</p>
 
 <script>
-  const slider = document.querySelector('.slider');
-  const pages = document.querySelectorAll('.page');
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeLabel = document.getElementById('theme-label');
-  const deviceModel = document.getElementById('device-model');
+  function getAppleDeviceInfo() {
+      const userAgent = navigator.userAgent;
+      let deviceModel = "Unknown Apple Device";
+      let softwareVersion = "Unknown";
 
-  // Load saved settings
-  function loadSettings() {
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      setTheme(savedTheme);
-      themeToggle.checked = savedTheme === 'dark';
-
-      const savedPage = localStorage.getItem('currentPage') || 'home';
-      setPage(savedPage);
-  }
-
-  // Save settings
-  function saveSettings() {
-      localStorage.setItem('theme', themeToggle.checked ? 'dark' : 'light');
-      localStorage.setItem('currentPage', slider.classList.contains('settings') ? 'settings' : 'home');
-  }
-
-  // Set theme
-  function setTheme(theme) {
-      if (theme === 'dark') {
-          document.documentElement.style.setProperty('--bg-color', '#333333');
-          document.documentElement.style.setProperty('--text-color', '#ffffff');
-          themeLabel.textContent = 'Dark Mode';
-      } else {
-          document.documentElement.style.setProperty('--bg-color', '#ffffff');
-          document.documentElement.style.setProperty('--text-color', '#333333');
-          themeLabel.textContent = 'Light Mode';
+      // Check if it's an Apple device
+      if (!/iPhone|iPad|iPod|Macintosh/.test(userAgent)) {
+          document.getElementById('not-apple').style.display = 'block';
+          document.querySelector('.info-container').style.display = 'none';
+          return;
       }
+
+      // Detect iPhone model
+      if (/iPhone/.test(userAgent)) {
+          const iPhoneVersion = userAgent.match(/iPhone OS (\d+)_/);
+          if (iPhoneVersion) {
+              softwareVersion = `iOS ${iPhoneVersion[1]}`;
+          }
+          const modelNumber = userAgent.match(/iPhone(\d+),\d+/);
+          if (modelNumber) {
+              const model = parseInt(modelNumber[1]);
+              if (model >= 14) deviceModel = "iPhone 12 or newer";
+              else if (model >= 12) deviceModel = "iPhone 11 or XS/XR";
+              else if (model >= 10) deviceModel = "iPhone X or 8";
+              else deviceModel = "iPhone 7 or older";
+          }
+      }
+      // Detect iPad model
+      else if (/iPad/.test(userAgent)) {
+          const iPadVersion = userAgent.match(/CPU OS (\d+)_/);
+          if (iPadVersion) {
+              softwareVersion = `iPadOS ${iPadVersion[1]}`;
+          }
+          deviceModel = "iPad";
+      }
+      // Detect Mac model
+      else if (/Macintosh/.test(userAgent)) {
+          const macVersion = userAgent.match(/Mac OS X (\d+)[._](\d+)/);
+          if (macVersion) {
+              const majorVersion = parseInt(macVersion[1]);
+              const minorVersion = parseInt(macVersion[2]);
+              if (majorVersion >= 11) {
+                  softwareVersion = `macOS ${majorVersion}`;
+              } else {
+                  softwareVersion = `macOS 10.${minorVersion}`;
+              }
+          }
+          deviceModel = "Mac";
+      }
+
+      document.getElementById('software-version').textContent = softwareVersion;
+      document.getElementById('device-model').textContent = deviceModel;
   }
 
-  // Set page
-  function setPage(page) {
-      slider.classList.toggle('settings', page === 'settings');
-      pages.forEach(p => p.classList.toggle('active', p.id === page));
-  }
-
-  // Event listeners
-  slider.addEventListener('click', () => {
-      const newPage = slider.classList.contains('settings') ? 'home' : 'settings';
-      setPage(newPage);
-      saveSettings();
-  });
-
-  themeToggle.addEventListener('change', () => {
-      setTheme(themeToggle.checked ? 'dark' : 'light');
-      saveSettings();
-  });
-
-  // Set device model
-  deviceModel.textContent = navigator.userAgent;
-
-  // Load settings on page load
-  loadSettings();
+  // Call the function when the page loads
+  window.onload = getAppleDeviceInfo;
 </script>
 
 </body>
