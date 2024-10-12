@@ -19,6 +19,7 @@
           };
         </script>
 
+
 <style>
   *:not(input):not(select):not(code):not(textarea):not([contenteditable]) {
      webkit-touch-callout: none;
@@ -31,6 +32,11 @@
   </style>
   </head>
 <body>
+  <div class="container">
+    <div class="content">
+        <div id="home" class="page active">
+    
+    <h1>Home</h1>
     <nav id="blurpart">
 
       <label class="logo">🥕Carrot</label>
@@ -143,8 +149,7 @@
     <div class="IpaDiv">
       <img src="images/Scarlet.png" alt=""> <div class="Content1"><label class="ShortName1">Scarlet ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </label> <p>v1.0.0</p></div>
         <div class="cont"> <a href="ipas/ScarletAlpha.ipa"  class="Download"><i class="fa-solid fa-cloud-arrow-down"></i></a></div>
-      </div>
-    
+      </div>\
       <div class="GIT">
         <div class="Hub">
          <a class="Redir" href="https://github.com/DebianArch64/Scarlet"><i class="fa-brands fa-github"></i> Github</a>
@@ -172,6 +177,90 @@
 
     </div>
 
+        </div>
+        <div id="settings" class="page">
+            <h1>Settings</h1>
+            <p>Device Model: <span id="device-model"></span></p>
+            <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="switch-slider"></span>
+                </label>
+                <span id="theme-label">Light Mode</span>
+            </div>
+        </div>
+    </div>
+    <div class="nav-slider">
+        <div class="slider">
+            <div class="slider-text">
+                <span>Home</span>
+                <span>Settings</span>
+            </div>
+            <div class="slider-button"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+  const slider = document.querySelector('.slider');
+  const pages = document.querySelectorAll('.page');
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeLabel = document.getElementById('theme-label');
+  const deviceModel = document.getElementById('device-model');
+
+  // Load saved settings
+  function loadSettings() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      setTheme(savedTheme);
+      themeToggle.checked = savedTheme === 'dark';
+
+      const savedPage = localStorage.getItem('currentPage') || 'home';
+      setPage(savedPage);
+  }
+
+  // Save settings
+  function saveSettings() {
+      localStorage.setItem('theme', themeToggle.checked ? 'dark' : 'light');
+      localStorage.setItem('currentPage', slider.classList.contains('settings') ? 'settings' : 'home');
+  }
+
+  // Set theme
+  function setTheme(theme) {
+      if (theme === 'dark') {
+          document.documentElement.style.setProperty('--bg-color', '#333333');
+          document.documentElement.style.setProperty('--text-color', '#ffffff');
+          themeLabel.textContent = 'Dark Mode';
+      } else {
+          document.documentElement.style.setProperty('--bg-color', '#ffffff');
+          document.documentElement.style.setProperty('--text-color', '#333333');
+          themeLabel.textContent = 'Light Mode';
+      }
+  }
+
+  // Set page
+  function setPage(page) {
+      slider.classList.toggle('settings', page === 'settings');
+      pages.forEach(p => p.classList.toggle('active', p.id === page));
+  }
+
+  // Event listeners
+  slider.addEventListener('click', () => {
+      const newPage = slider.classList.contains('settings') ? 'home' : 'settings';
+      setPage(newPage);
+      saveSettings();
+  });
+
+  themeToggle.addEventListener('change', () => {
+      setTheme(themeToggle.checked ? 'dark' : 'light');
+      saveSettings();
+  });
+
+  // Set device model
+  deviceModel.textContent = navigator.userAgent;
+
+  // Load settings on page load
+  loadSettings();
+</script>
 
 </body>
 </html>
