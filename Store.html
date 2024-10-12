@@ -161,14 +161,18 @@
 
     </div>
 
-    <h1>Device Information</h1>
-    <div class="info-container">
+    
+    
+    <label class="ShorDiv">ℹ️ Information</label>
+     
+    
+    <hr>
 
       <div id="app" >
-        <div id="version" class="VerDiv">🔄 Current Version: <span id="current-version">1.6.0</span></div>
+        <div id="version" class="VerDiv">🔄 Current Version: <span id="current-version">1.6.4</span></div>
         <div id="update-message"></div>
       </div>
-    </div>
+   
     <script src="app.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
@@ -177,16 +181,13 @@
                 .catch(error => console.log('Service Worker registration failed:', error));
         }
     </script>
-<div class="info-container">
-  <div class="info-item">
+
       <span class="info-label">Software Version:</span>
-      <span id="software-version">Detecting...</span>
-  </div>
-  <div class="info-item">
+      <span class="info-label" id="software-version">Detecting...</span>
+
+
       <span class="info-label">Device Model:</span>
-      <span id="device-model">Detecting...</span>
-  </div>
-</div>
+      <span class="info-label" id="device-model">Detecting...</span>
 
 <script>
   function getAppleDeviceInfo() {

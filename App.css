@@ -17,6 +17,14 @@ body {
     background-color: #101010;
 }
 
+.info-label {
+    font-size: 18px;
+        font-family: 'biOS';
+        color: #ffffff78;
+        padding-left: 10px;
+        padding-block-end: 20px;
+
+ }
 
 
 nav {
