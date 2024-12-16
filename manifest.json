@@ -1,8 +1,8 @@
 {
-  "short_name": "Carrot",
-  "name": "Carrot",
-  "theme_color": "#101010",
-  "background_color": "#101010",
+  "short_name": "GlowStore",
+  "name": "GlowStore",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display_override": ["fullscreen", "minimal-ui"],
   "display": "standalone",
   "icons": [

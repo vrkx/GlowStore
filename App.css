@@ -94,7 +94,7 @@ p.version{
 nav ul li a{
 
   
-    background: -webkit-linear-gradient(#ffa34c, #179c17);
+    background: -webkit-linear-gradient(#4c00ff, #fc6fd9);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 animation: buttonAnim 10s ease infinite;
@@ -119,7 +119,7 @@ text-decoration-color: #000000;
 
 
     label.logo {
-        background: -webkit-linear-gradient(45deg, #ffa34c, #00ff00);
+        background: -webkit-linear-gradient(45deg, #4032ff, #ff0000 );
         -webkit-background-clip: text;
         background-size: 1000% 1000%;
         animation: LogoAnim 10s ease infinite;

@@ -12,7 +12,7 @@ src: url(fonts/SFPRODISPLAYREGULAR.OTF);
     }
 
     body {
-        background: -webkit-linear-gradient(17deg, #ffa34c, #ffa34c, #179c17);
+        background: -webkit-linear-gradient(17deg, #2e5fff, #ff3d3d, );
         background-size: 1000% 1000%;
         animation: gradientAnim 10s ease infinite;
     }
@@ -34,9 +34,22 @@ src: url(fonts/SFPRODISPLAYREGULAR.OTF);
 
 .StarterCard label {
 
-font-family: biOS;
+
 color: white;
 text-align: center;
+
+}
+
+.ITitle {
+
+    font-family: biOS;
+    font-size: 30px;
+
+}
+
+.IDescript{
+
+    font-family: iOS;
 
 }
 
@@ -125,7 +138,7 @@ a{
 
 .feature {
     display: flex;
-    background: #151515;
+    background: #0f0f0f;
     height: 40px;
     width: 350px;
     text-align: left;
@@ -201,5 +214,25 @@ h1{
     background: #101010;
     color: white;
     border-radius: 15px;
+
+}
+
+.gDownload {
+    background-color: #151515;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 110px;
+    width: 140px;
+    display: flex
+;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gDownload i {
+
+background-color: #151515;
 
 }
