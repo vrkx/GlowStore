@@ -68,6 +68,9 @@ text-align: center;
 
 }
 
+
+
+
 .Download{
 
     display: flex;
@@ -186,11 +189,12 @@ align-self: center;
 }
 
 h1 {
-   
-    align-content: center;
-    border-spacing: 10px;
-    display: flex;
-    width: auto;
+    /* align-content: center; */
+    /* border-spacing: 10px; */
+    /* display: flex
+; */
+    /* width: auto; */
+    text-align: center;
     height: 40px;
     border-radius: 111px;
     background: #101010;
@@ -198,15 +202,12 @@ h1 {
     justify-content: center;
     align-items: center;
     /* padding-block-end: 69px; */
-}
-h1{
-
     text-align: center;
-    font-family: iOS;
+    font-family: biOS;
     color: #ffffff;
     
-
 }
+
 
 .Downloadspan{
     display: grid;
